@@ -1,6 +1,5 @@
-import { IconMail, type Icon } from '@tabler/icons-react'
+import { type Icon } from '@tabler/icons-react'
 
-import { Button } from '@/components/ui/button'
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -23,14 +22,18 @@ export function NavMain({
       <SidebarGroupContent className="flex flex-col gap-2">
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center gap-2">
+            {/* Aquí puedes poner otros botones si deseas */}
           </SidebarMenuItem>
         </SidebarMenu>
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton tooltip={item.title}>
-                {item.icon && <item.icon />}
-                <span>{item.title}</span>
+              <SidebarMenuButton
+                tooltip={item.title}
+                className="h-12 items-center"
+              >
+                {item.icon && <item.icon className="!w-5 !h-5 shrink-0" />}
+                <span className="text-lg font-medium">{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
