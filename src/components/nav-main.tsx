@@ -30,10 +30,10 @@ export function NavMain({
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton
                 tooltip={item.title}
-                className="h-12 items-center"
+                className="h-12"
               >
                 {item.icon && <item.icon className="!w-5 !h-5 shrink-0" />}
-                <span className="text-lg font-medium">{item.title}</span>
+                <span className="text-base font-medium">{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
